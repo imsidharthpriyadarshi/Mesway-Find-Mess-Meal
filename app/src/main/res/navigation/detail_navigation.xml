@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_navigation"
+    app:startDestination="@id/mainDetailFragment">
+
+    <fragment
+        android:id="@+id/mainDetailFragment"
+        android:name="in.mesway.fragments.details.MainDetailFragment"
+        android:label="fragment_main_detail"
+        tools:layout="@layout/fragment_main_detail" >
+        <action
+            android:id="@+id/action_mainDetailFragment_to_menuBigSizePicDialog"
+            app:destination="@id/menuBigSizePicDialog" />
+        <action
+            android:id="@+id/action_mainDetailFragment_to_subscribeForBottomSheet"
+            app:destination="@id/subscribeForBottomSheet"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"
+            />
+        <action
+            android:id="@+id/action_mainDetailFragment_to_doLoginFragment2"
+            app:destination="@id/doLoginFragment2" />
+    </fragment>
+    <dialog
+        android:id="@+id/menuBigSizePicDialog"
+        android:name="in.mesway.fragments.details.MenuBigSizePicDialog"
+        android:label="fragment_menu_big_size_pic_dialog"
+        tools:layout="@layout/fragment_menu_big_size_pic_dialog" >
+
+    </dialog>
+    <fragment
+        android:id="@+id/subscribeForBottomSheet"
+        android:name="in.mesway.fragments.details.SubscriptionsDetail"
+        android:label="fragment_subscribe_for_bottom_sheet"
+        tools:layout="@layout/fragment_subscription_detail" >
+        <action
+            android:id="@+id/action_subscribeForBottomSheet_to_addressDetailFragment"
+            app:destination="@id/addressDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment2"
+        android:name="in.mesway.fragments.settings.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" >
+        <argument
+            android:name="who"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalPaymentFragment"
+        android:name="in.mesway.fragments.details.FinalPaymentFragment"
+        android:label="fragment_final_payment"
+        tools:layout="@layout/fragment_final_payment" >
+        <action
+            android:id="@+id/action_finalPaymentFragment_to_orderPlacedFragment"
+            app:destination="@id/orderPlacedFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:exitAnim="@anim/slide_exit"
+            app:popExitAnim="@anim/pop_slide_enter"
+            app:popEnterAnim="@anim/pop_slide_enter"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/orderPlacedFragment"
+        android:name="in.mesway.fragments.details.OrderPlacedFragment"
+        android:label="fragment_order_placed"
+        tools:layout="@layout/fragment_order_placed" >
+        <action
+            android:id="@+id/action_orderPlacedFragment_to_subscriptionsFragment2"
+            app:destination="@id/subscriptionsFragment2"
+            app:enterAnim="@anim/slide_enter"
+            app:exitAnim="@anim/slide_exit"
+            app:popExitAnim="@anim/pop_slide_enter"
+            app:popEnterAnim="@anim/pop_slide_enter"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addressDetailFragment"
+        android:name="in.mesway.fragments.details.AddressDetailFragment"
+        android:label="AddressDetailFragment" >
+        <action
+            android:id="@+id/action_addressDetailFragment_to_addAddressFragment2"
+            app:destination="@id/addAddressFragment2" />
+        <action
+            android:id="@+id/action_addressDetailFragment_to_finalPaymentFragment"
+            app:destination="@id/finalPaymentFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:exitAnim="@anim/slide_exit"
+            app:popExitAnim="@anim/pop_slide_enter"
+            app:popEnterAnim="@anim/pop_slide_enter"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/subscriptionsFragment2"
+        android:name="in.mesway.fragments.meals.SubscriptionsFragment"
+        android:label="fragment_subscriptions"
+        tools:layout="@layout/fragment_subscriptions" />
+    <fragment
+        android:id="@+id/doLoginFragment2"
+        android:name="in.mesway.fragments.home.DoLoginFragment"
+        android:label="fragment_do_login"
+        tools:layout="@layout/fragment_do_login" />
+</navigation>

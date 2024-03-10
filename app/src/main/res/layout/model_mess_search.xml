@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/cons_food_item"
+    android:background="@drawable/edit_text_background"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_margin="@dimen/dp_10"
+    android:elevation="2dp"
+    android:padding="@dimen/dp_5"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/img_meal"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_check_box_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/t_mess_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:fontFamily="sans-serif-medium"
+        android:text="Chawal, Dall, Ghee, Achar, Sabjhi, knndfkskd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_meal"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ln_meal_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:background="@drawable/bg_rating_drawable"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_3"
+        app:layout_constraintStart_toStartOf="@+id/t_mess_name"
+        app:layout_constraintTop_toBottomOf="@+id/t_mess_name"
+        >
+
+        <TextView
+            android:id="@+id/t_meal_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="4.5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_12" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:src="@drawable/round_star_rate_18" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/t_mess_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="near to ganganagar chamaparan"
+        android:textSize="@dimen/dp_14"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ln_meal_rating"
+
+        app:layout_constraintTop_toBottomOf="@+id/ln_meal_rating" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

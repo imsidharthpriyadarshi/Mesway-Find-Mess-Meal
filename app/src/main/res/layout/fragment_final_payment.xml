@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.details.FinalPaymentFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/img_back_arrow"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:src="@drawable/baseline_chevron_left_36"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_amount_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_23"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_back_arrow"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_place_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_pay"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/dp_16"
+                android:padding="@dimen/dp_10"
+                android:text="This Seller not accept payment online"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_upi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/bg_breakfast_time"
+                android:padding="@dimen/dp_15">
+
+                <ImageView
+                    android:id="@+id/img_payment_upi"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_baseline_credit_card"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_payment_upi_des"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/t_payment_upi"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_upi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="UPI"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/img_payment_upi"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_upi_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Ex:- paytm,phonepe"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toStartOf="@+id/t_payment_upi"
+                    app:layout_constraintTop_toBottomOf="@+id/t_payment_upi"
+
+                    />
+
+                <TextView
+                    android:id="@+id/upi_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 2,999"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/check_box_upi"
+                    app:layout_constraintEnd_toStartOf="@+id/check_box_upi"
+                    app:layout_constraintTop_toTopOf="@+id/check_box_upi" />
+
+                <CheckBox
+                    android:id="@+id/check_box_upi"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/bg_breakfast_time"
+                android:padding="@dimen/dp_15">
+
+                <ImageView
+                    android:id="@+id/img_payment_card"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_baseline_credit_card"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_payment_card_des"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/t_payment_card"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="Card"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/img_payment_card"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_card_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Ex:- Ex:- Rupay, Visa"
+                    android:textSize="@dimen/dp_15"
+
+                    app:layout_constraintStart_toStartOf="@+id/t_payment_card"
+                    app:layout_constraintTop_toBottomOf="@+id/t_payment_card"
+
+                    />
+
+                <TextView
+                    android:id="@+id/card_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 2,999 + 2-3% "
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/check_box_card"
+                    app:layout_constraintEnd_toStartOf="@+id/check_box_card"
+                    app:layout_constraintTop_toTopOf="@+id/check_box_card" />
+
+                <CheckBox
+                    android:id="@+id/check_box_card"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_net_banking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:clickable="false"
+                android:background="@drawable/bg_breakfast_time"
+                android:padding="@dimen/dp_15">
+
+                <ImageView
+                    android:id="@+id/img_payment_net_banking"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_baseline_net_banking"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_payment_netbanking_des"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/t_payment_netbanking"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_netbanking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="Net Banking"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/img_payment_net_banking"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_netbanking_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Ex:- Canara, Axix bank"
+                    android:textSize="@dimen/dp_15"
+
+                    app:layout_constraintStart_toStartOf="@+id/t_payment_netbanking"
+                    app:layout_constraintTop_toBottomOf="@+id/t_payment_netbanking"
+
+                    />
+
+                <TextView
+                    android:id="@+id/net_banking_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 2,999 + 2-3% "
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/check_box_netbanking"
+                    app:layout_constraintEnd_toStartOf="@+id/check_box_netbanking"
+                    app:layout_constraintTop_toTopOf="@+id/check_box_netbanking" />
+
+
+                <CheckBox
+                    android:id="@+id/check_box_netbanking"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_cash_on_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/bg_breakfast_time"
+                android:padding="@dimen/dp_15">
+
+                <ImageView
+                    android:id="@+id/img_payment_cash_on_delivery"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/ic_baseline_cod"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_payment_name_des"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/t_payment_cash_on_delivery"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_cash_on_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="Cash On Delivery"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/img_payment_cash_on_delivery"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_name_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="You can pay using phonepe, paytm"
+                    android:textSize="@dimen/dp_15"
+
+                    app:layout_constraintStart_toStartOf="@+id/t_payment_cash_on_delivery"
+                    app:layout_constraintTop_toBottomOf="@+id/t_payment_cash_on_delivery"
+
+                    />
+
+                <TextView
+                    android:id="@+id/cod_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 2,999"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/check_box_cash_on_delivery"
+                    app:layout_constraintEnd_toStartOf="@+id/check_box_cash_on_delivery"
+                    app:layout_constraintTop_toTopOf="@+id/check_box_cash_on_delivery" />
+
+
+                <CheckBox
+                    android:id="@+id/check_box_cash_on_delivery"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+         android:id="@+id/btn_place_order"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintBottom_toBottomOf="parent"
+         android:text="Pay"
+         android:textSize="@dimen/dp_20"
+         android:textAllCaps="false"
+         android:layout_marginHorizontal="20dp"
+         android:padding="@dimen/dp_15"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:padding="@dimen/dp_15"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/bg_notification">
+
+    <ImageView
+        android:id="@+id/img_type"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@drawable/outline_home_black_18"
+        app:tint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/t_name_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:fontFamily="sans-serif-medium"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_18"
+        app:layout_constraintBottom_toBottomOf="@+id/img_type"
+        app:layout_constraintStart_toEndOf="@id/img_type"
+        app:layout_constraintTop_toTopOf="@+id/img_type" />
+
+    <TextView
+        android:id="@+id/t_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sidharth Priyadrashi"
+        app:layout_constraintTop_toBottomOf="@+id/img_type"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textSize="@dimen/dp_18"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/t_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="vill-gangapur, p/o-Katauna, p/s-katrisarai"
+        app:layout_constraintTop_toBottomOf="@+id/t_name"
+        android:textSize="@dimen/dp_18"
+        android:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/t_landmark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Near to hanuman mandir"
+        app:layout_constraintTop_toBottomOf="@+id/t_address"
+        android:textSize="@dimen/dp_18"
+        android:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/t_pin_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bihar (805130)"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/t_landmark"
+        android:textSize="@dimen/dp_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/t_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6299018512"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/t_pin_code"
+        android:textSize="@dimen/dp_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_edit"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textSize="@dimen/dp_16"
+        android:padding="@dimen/dp_10"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textColor="#2962FF"
+        app:layout_constraintBottom_toBottomOf="@+id/t_name_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/t_name_type"
+        app:strokeColor="#2962FF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/t_phone_number"
+        android:text="Remove"
+        android:textSize="@dimen/dp_16"
+        android:textAllCaps="false"
+        android:textColor="#D50000"
+        app:layout_goneMarginTop="20dp"
+        android:padding="@dimen/dp_10"
+        app:strokeColor="#D50000"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

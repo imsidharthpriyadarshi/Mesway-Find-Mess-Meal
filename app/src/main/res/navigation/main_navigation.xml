@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="in.mesway.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_foodSearchFragment"
+            app:destination="@id/foodSearchFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_locationSearchFragment"
+            app:destination="@id/locationSearchFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_homeFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_subscriptionsFragment"
+            app:destination="@id/subscriptionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_yourOrderFragment"
+            app:destination="@id/yourOrderFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="in.mesway.fragments.meals.MealsFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_subscriptionsFragment"
+            app:destination="@id/subscriptionsFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"
+
+            />
+        <action
+            android:id="@+id/action_mealsFragment_to_cancelMealDialogFragment"
+            app:destination="@id/cancelMealDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="in.mesway.fragments.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_addressFragment"
+            app:destination="@id/addressFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_webviewFragment"
+            app:destination="@id/webviewFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_anySuggestionFragment"
+            app:destination="@id/anySuggestionFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_orderHistoryFragment"
+            app:destination="@id/yourOrderFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_rateUsDialogFragment"
+            app:destination="@id/rateUsDialogFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/foodSearchFragment"
+        android:name="in.mesway.fragments.home.MessSearchFragment"
+        android:label="fragment_food_search"
+        tools:layout="@layout/fragment_food_search" />
+    <fragment
+        android:id="@+id/locationSearchFragment"
+        android:name="in.mesway.fragments.home.LocationSearchFragment"
+        android:label="fragment_location_search"
+        tools:layout="@layout/fragment_location_search" >
+        <action
+            android:id="@+id/action_locationSearchFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="in.mesway.fragments.home.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <argument
+        android:name="secondary_location"
+         />
+    <argument
+        android:name="main_location"
+        android:defaultValue="location" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="in.mesway.fragments.settings.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+        <action
+            android:id="@+id/action_addressFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="in.mesway.fragments.settings.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="in.mesway.fragments.settings.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/profileSettingsFragment"
+        android:name="in.mesway.fragments.settings.ProfileSettingsFragment"
+        android:label="fragment_profile_settings"
+        tools:layout="@layout/fragment_profile_settings" />
+    <fragment
+        android:id="@+id/webviewFragment"
+        android:name="in.mesway.fragments.settings.TermConditionFragment"
+        android:label="fragment_webview"
+        tools:layout="@layout/fragment_term_condition" />
+    <fragment
+        android:id="@+id/anySuggestionFragment"
+        android:name="in.mesway.fragments.settings.AnySuggestionFragment"
+        android:label="fragment_any_suggestion"
+        tools:layout="@layout/fragment_any_suggestion" />
+    <fragment
+        android:id="@+id/yourOrderFragment"
+        android:name="in.mesway.fragments.settings.YourOrdersFragment"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_your_orders" >
+        <action
+            android:id="@+id/action_yourOrderFragment_to_subscriptionsFragment"
+            app:destination="@id/subscriptionsFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/subscriptionsFragment"
+        android:name="in.mesway.fragments.meals.SubscriptionsFragment"
+        android:label="fragment_subscriptions"
+        tools:layout="@layout/fragment_subscriptions" />
+    <dialog
+        android:id="@+id/rateUsDialogFragment"
+        android:name="in.mesway.fragments.settings.RateUsDialogFragment"
+        android:label="fragment_rateus_dailog"
+        tools:layout="@layout/fragment_rateus_dailog" />
+    <dialog
+        android:id="@+id/cancelMealDialogFragment"
+        android:name="in.mesway.fragments.meals.CancelMealDialogFragment"
+        android:label="fragment_cancel_meal_dialog"
+        tools:layout="@layout/fragment_cancel_meal_dialog" />
+    <fragment
+        android:id="@+id/doLoginFragment"
+        android:name="in.mesway.fragments.home.DoLoginFragment"
+        android:label="fragment_do_login"
+        tools:layout="@layout/fragment_do_login" >
+        <action
+            android:id="@+id/action_doLoginFragment_to_signupActivity"
+            app:destination="@id/signupActivity"
+            app:popUpTo="@id/signupActivity"
+            app:popUpToInclusive="true" />
+    </fragment><action android:id="@+id/action_global_doLoginFragment" app:destination="@id/doLoginFragment"/>
+    <activity
+        android:id="@+id/signupActivity"
+        android:name="in.mesway.activity.SignupActivity"
+        android:label="activity_signup"
+        tools:layout="@layout/activity_signup" />
+</navigation>

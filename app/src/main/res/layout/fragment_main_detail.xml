@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view_main_detail"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.details.MainDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <ImageView
+            android:id="@+id/img_mess_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thlai_sample"
+            android:transitionName="img_meal_transition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/t_mess_name"
+            android:transitionName="mess_name_transition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Mess Name"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_mess_detail" />
+
+        <TextView
+            android:id="@+id/t_mess_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="mess_for_transition"
+            android:text="BeakFast Lunch Dinner"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintStart_toStartOf="@+id/t_mess_name"
+            app:layout_constraintTop_toBottomOf="@+id/t_mess_name" />
+
+        <TextView
+            android:id="@+id/t_mess_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="@dimen/dp_3"
+            android:transitionName="mess_address_name"
+            android:text="Narela town ayodya gonda up"
+            app:layout_constraintEnd_toStartOf="@+id/ln_rating_review"
+            android:textSize="@dimen/dp_14"
+            app:layout_constraintStart_toStartOf="@+id/t_mess_for"
+            app:layout_constraintTop_toBottomOf="@+id/t_mess_for" />
+
+        <LinearLayout
+            android:id="@+id/ln_rating_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_mess_detail_rating"
+            app:layout_constraintBottom_toBottomOf="@+id/t_mess_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/t_mess_name">
+
+
+            <LinearLayout
+                android:transitionName="linear_rating_transition"
+                android:id="@+id/ln_meal_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rating_detail_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_5"
+
+                >
+
+                <TextView
+                    android:id="@+id/t_mess_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4.5"
+                    android:transitionName="rating_transition"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:transitionName="star_transition"
+                    android:src="@drawable/round_star_rate_18" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/t_how_many_rated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="33"
+                android:transitionName="how_many_transition"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:textAlignment="center"
+                android:textSize="@dimen/dp_18"
+
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ratings"
+                android:textAlignment="center"
+                android:textSize="@dimen/dp_14"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/t_mess_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mess Time:"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textSize="@dimen/dp_18"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_mess_address"
+            app:layout_constraintStart_toStartOf="@id/t_mess_address"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_mess_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:elevation="@dimen/dp_10"
+            app:layout_constraintTop_toBottomOf="@id/t_mess_time"
+            android:background="@drawable/edit_text_background"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_breakfast_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/bg_breakfast_time"
+                    android:elevation="4dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/t_breakfast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BreakFast:"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/dp_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/t_breakfast_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8:00-10:00 am"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp_13"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/t_breakfast"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_lunch_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/bg_lunch_time"
+                    android:elevation="4dp"
+                    android:padding="@dimen/dp_10"
+                    android:layout_weight="1"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cons_breakfast">
+
+                    <TextView
+                        android:id="@+id/t_lunch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lunch:"
+                        android:textColor="@color/lunch"
+                        android:textSize="@dimen/dp_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/t_lunch_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1:00-2:00 pm"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp_13"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/t_lunch"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_dinner_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/bg_dinner_time"
+                    android:elevation="4dp"
+                    android:padding="@dimen/dp_10"
+                    android:layout_weight="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+                    <TextView
+                        android:id="@+id/t_dinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dinner:"
+                        android:textColor="@color/dinner"
+                        android:textSize="@dimen/dp_14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/t_dinner_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8:30-9:00 pm"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp_13"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/t_dinner"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/t_serving_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/dp_18"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Serving Days:"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintTop_toBottomOf="@+id/card_mess_time"
+            app:layout_constraintStart_toStartOf="@+id/card_mess_time"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/hori_scroll_serving_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dp_10"
+            app:layout_constraintTop_toBottomOf="@id/t_serving_days"
+            app:layout_constraintStart_toStartOf="@+id/t_serving_days"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_mon_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_serving_days"
+                    >
+                    <TextView
+                        android:id="@+id/mon_serving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="Monday"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/dp_14"
+                        app:drawableTint="@color/green"
+                        app:drawableStartCompat="@drawable/outline_check_circle_black_24" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_tue_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_serving_days"
+                    >
+                    <TextView
+                        android:id="@+id/tue_serving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Tuesday"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp_14"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        app:drawableTint="@color/green"
+                        app:drawableStartCompat="@drawable/outline_check_circle_24" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_wed_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_margin="@dimen/dp_5"
+
+                    android:background="@drawable/bg_serving_days"
+                    >
+                    <TextView
+                        android:id="@+id/wed_serving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Wednesday"
+                        android:textSize="@dimen/dp_14"
+
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        app:drawableTint="@color/green"
+                        app:drawableStartCompat="@drawable/outline_check_circle_24" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout> <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/cons_thu_serving"
+                android:padding="@dimen/dp_5"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@drawable/bg_serving_days"
+                >
+                <TextView
+                    android:id="@+id/thu_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Thursday"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/dp_14"
+                    app:drawableTint="@color/green"
+                    app:drawableStartCompat="@drawable/outline_check_circle_24" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout> <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/cons_fri_serving"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_5"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@drawable/bg_serving_days"
+                >
+                <TextView
+                    android:id="@+id/fri_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Friday"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/dp_14"
+
+                    android:textColor="@color/black"
+                    app:drawableTint="@color/green"
+                    app:drawableStartCompat="@drawable/outline_check_circle_24" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_sat_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_serving_days"
+                    >
+                    <TextView
+                        android:id="@+id/sat_serving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Saturday"
+                        android:textSize="@dimen/dp_14"
+
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        app:drawableTint="@color/green"
+                        app:drawableStartCompat="@drawable/outline_check_circle_24" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_sun_serving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_5"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@drawable/bg_serving_days"
+                    >
+                    <TextView
+                        android:id="@+id/sun_serving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Sunday"
+                        android:textSize="@dimen/dp_14"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center"
+                        app:drawableTint="@color/green"
+                        app:drawableStartCompat="@drawable/outline_check_circle_24"/>
+                       <!-- app:drawableStartCompat="@drawable/outline_cancel_24"-->
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/t_mess_routine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:textSize="@dimen/dp_18"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Menu:"
+            app:layout_constraintTop_toBottomOf="@+id/hori_scroll_serving_days"
+            app:layout_constraintStart_toStartOf="@+id/hori_scroll_serving_days"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_mess_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            app:cardCornerRadius="@dimen/dp_10"
+            app:layout_constraintTop_toBottomOf="@id/t_mess_routine"
+
+            >
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cons_breakfast_menu"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_10"
+                        android:background="@drawable/bg_breakfast_time"
+                        >
+                        <TextView
+                            android:id="@+id/t_breakfast_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Menu"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_14"
+                            android:textAlignment="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_breakfast_menu"
+                            android:layout_width="@dimen/dp_120"
+                            android:layout_height="@dimen/dp_160"
+                            android:scaleType="fitXY"
+                            android:padding="@dimen/dp_2"
+                            android:transitionName="menu_image_transition"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/t_breakfast_menu" />
+
+
+                        <ImageView
+                            android:id="@+id/img_breakfast_menu_bigsize_for_glide"
+                            android:layout_width="@dimen/dp_400"
+                            android:layout_height="@dimen/dp_533"
+                            android:scaleType="fitXY"
+                            android:visibility="gone"
+                            android:padding="@dimen/dp_2"
+                            android:transitionName="menu_image_transition"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/t_breakfast_menu" />
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cons_lunch_menu"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_10"
+                        android:background="@drawable/bg_lunch_time"
+                        >
+                        <TextView
+                            android:id="@+id/t_lunch_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunch"
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/dp_14"
+
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_lunch_menu"
+                            android:layout_width="@dimen/dp_120"
+                            android:layout_height="@dimen/dp_160"
+                            android:scaleType="fitXY"
+                            android:padding="@dimen/dp_2"
+                            android:transitionName="menu_image_transition"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/t_lunch_menu" />
+
+
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cons_dinner_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/dp_10"
+                        android:background="@drawable/bg_dinner_time"
+                        >
+                        <TextView
+                            android:id="@+id/t_dinner_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dinner"
+                            android:textSize="@dimen/dp_14"
+
+                            android:textColor="@color/black"
+                            android:textAlignment="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_dinner_menu"
+                            android:layout_width="@dimen/dp_120"
+                            android:layout_height="@dimen/dp_160"
+                            android:scaleType="fitXY"
+                            android:padding="@dimen/dp_2"
+                            android:transitionName="menu_image_transition"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/t_dinner_menu" />
+
+
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/t_mess_time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:lottie_rawRes="@raw/home_skeleton"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+
+        <include
+            android:id="@+id/include_subs_layout"
+            layout="@layout/include_subscription_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/card_mess_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

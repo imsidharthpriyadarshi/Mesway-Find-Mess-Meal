@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_subscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="Subscriptions :"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp_20"
+
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_subs_one_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:visibility="gone"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/edit_text_background"
+            android:elevation="@dimen/dp_10">
+
+            <LinearLayout
+                android:id="@+id/card_subs_name_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/t_for_subs_1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:text="One Day"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_30" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_day" />
+
+            <LinearLayout
+                android:id="@+id/ln_per_day_price_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_day">
+
+                <TextView
+                    android:id="@+id/t_price_subs_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Price:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="@dimen/dp_1"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/t_one_meal_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="1 meal/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_one_meal_price_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_one_meal_one"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_one_meal_one" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
+
+                        <TextView
+                            android:id="@+id/t_two_meal_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="2 meals/day"
+                            android:textColor="@color/black"
+
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_two_meal_price_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_two_meal_day"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            app:layout_constraintTop_toTopOf="@+id/t_two_meal_day" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout111"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintHorizontal_bias="0.5">
+
+                        <TextView
+                            android:id="@+id/t_three_meal_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="3 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_three_meal_price_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/t_three_meal_day"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_three_meal_day" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cond_security_deposit_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_7"
+                android:background="@drawable/bg_breakfast_time"
+                android:layout_marginTop="@dimen/dp_5"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/ln_per_day_price_day"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_tiffin_box_1"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:src="@drawable/tiffin_box"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_security_deposit_1" />
+
+
+                <TextView
+                    android:id="@+id/txt_security_deposit_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="Security For Tiffin"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toEndOf="@+id/img_tiffin_box_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/t_security_price_amount_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 200"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toStartOf="@+id/txt_security_deposit_1"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_security_deposit_1" />
+
+
+
+                <TextView
+                    android:id="@+id/t_refunded_tex_1t"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="This amount will be refunded at the time of last meal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/t_security_price_amount_1"
+                    app:layout_constraintTop_toBottomOf="@+id/t_security_price_amount_1" />
+
+                <TextView
+                    android:id="@+id/t_refundable_green_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refundable"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dp_15"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ln_serving_meal_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cond_security_deposit_1">
+
+                <TextView
+                    android:id="@+id/t_serving_meal_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Serving meal:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_breakfast_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="BreakFast"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_lunch_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+
+
+                        android:elevation="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Lunch"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_dinner_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+
+                        app:layout_constraintHorizontal_bias="0.5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Dinner"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_subs_one_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:padding="@dimen/dp_15"
+                android:text="Subscribe"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dp_18"
+                app:cornerRadius="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ln_serving_meal_one" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_subs_seven_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/edit_text_background"
+            android:elevation="@dimen/dp_10">
+
+            <LinearLayout
+                android:id="@+id/card_subs_name_7_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/t_for_subs_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:text="Seven Days"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_30" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_7_days" />
+
+            <LinearLayout
+                android:id="@+id/ln_price_7_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_7_days">
+
+                <TextView
+                    android:id="@+id/t_price_subs_7_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Price:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/t_one_meal_7_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="1 meal/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_one_meal_price_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/t_one_meal_7_days"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_one_meal_7_days" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout77"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
+
+                        <TextView
+                            android:id="@+id/t_two_meal_day_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="2 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_two_meal_price_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_two_meal_day_7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_two_meal_day_7"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout777"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+
+                        app:layout_constraintHorizontal_bias="0.5"
+                        tools:layout_editor_absoluteX="259dp">
+
+                        <TextView
+                            android:id="@+id/t_three_meal_day_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="3 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_three_meal_price_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/t_three_meal_day_7"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            app:layout_constraintTop_toTopOf="@+id/t_three_meal_day_7" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cond_security_deposit_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_7"
+                android:visibility="gone"
+                android:background="@drawable/bg_breakfast_time"
+                android:layout_marginTop="@dimen/dp_5"
+                app:layout_constraintTop_toBottomOf="@+id/ln_price_7_days"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_tiffin_box_7"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:src="@drawable/tiffin_box"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_security_deposit_7" />
+
+
+                <TextView
+                    android:id="@+id/txt_security_deposit_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="Security For Tiffin"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toEndOf="@+id/img_tiffin_box_7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/t_security_price_amount_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 200"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toStartOf="@+id/txt_security_deposit_7"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_security_deposit_7" />
+
+
+
+                <TextView
+                    android:id="@+id/t_refunded_tex_7t"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="This amount will be refunded at the time of last meal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/t_security_price_amount_7"
+                    app:layout_constraintTop_toBottomOf="@+id/t_security_price_amount_7" />
+
+                <TextView
+                    android:id="@+id/t_refundable_green_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refundable"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dp_15"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ln_serving_meal_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cond_security_deposit_7">
+
+                <TextView
+                    android:id="@+id/t_serving_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Serving:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_breakfast_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="BreakFast"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_lunch_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+
+
+                        android:elevation="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                        tools:layout_editor_absoluteX="132dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Lunch"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_dinner_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+
+                        app:layout_constraintHorizontal_bias="0.5"
+                        tools:layout_editor_absoluteX="259dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Dinner"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_subs_seven_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:padding="@dimen/dp_15"
+                android:text="Subscribe"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dp_18"
+                app:cornerRadius="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ln_serving_meal_7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_subs_fifteen_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/edit_text_background"
+            android:elevation="@dimen/dp_10">
+
+            <LinearLayout
+                android:id="@+id/card_subs_name_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/t_for_subs_15"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:text="Half Month"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_30" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_15" />
+
+            <LinearLayout
+                android:id="@+id/ln_per_day_price_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_15">
+
+                <TextView
+                    android:id="@+id/t_price_subs_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Price:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/t_one_meal_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="1 meal/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_one_meal_price_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_one_meal_15"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_one_meal_15"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout1515"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                        tools:layout_editor_absoluteX="132dp">
+
+                        <TextView
+                            android:id="@+id/t_two_meal_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="2 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_two_meal_price_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_two_meal_15"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_two_meal_15"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout151515"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        tools:layout_editor_absoluteX="259dp">
+
+                        <TextView
+                            android:id="@+id/t_three_meal_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="3 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_three_meal_price_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_three_meal_15"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_three_meal_15"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cond_security_deposit_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_7"
+                android:visibility="gone"
+                android:background="@drawable/bg_breakfast_time"
+                android:layout_marginTop="@dimen/dp_5"
+                app:layout_constraintTop_toBottomOf="@+id/ln_per_day_price_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_tiffin_box_15"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:src="@drawable/tiffin_box"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_security_deposit_15" />
+
+
+                <TextView
+                    android:id="@+id/txt_security_deposit_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="Security For Tiffin"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toEndOf="@+id/img_tiffin_box_15"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/t_security_price_amount_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 200"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toStartOf="@+id/txt_security_deposit_15"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_security_deposit_15" />
+
+
+                <TextView
+                    android:id="@+id/t_refunded_tex_15t"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="This amount will be refunded at the time of last meal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/t_security_price_amount_15"
+                    app:layout_constraintTop_toBottomOf="@+id/t_security_price_amount_15" />
+
+                <TextView
+                    android:id="@+id/t_refundable_green_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refundable"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dp_15"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ln_serving_meal_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cond_security_deposit_15">
+
+                <TextView
+                    android:id="@+id/t_serving_meal_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Serving:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_breakfast_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="BreakFast"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_lunch_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+
+
+                        android:elevation="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                        tools:layout_editor_absoluteX="132dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Lunch"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_dinner_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+
+                        app:layout_constraintHorizontal_bias="0.5"
+                        tools:layout_editor_absoluteX="259dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Dinner"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_subs_15_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:padding="@dimen/dp_15"
+                android:text="Subscribe"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dp_18"
+                app:cornerRadius="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ln_serving_meal_15" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_subs_thirty_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/edit_text_background"
+            android:elevation="@dimen/dp_10">
+
+            <LinearLayout
+                android:id="@+id/card_subs_name_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/t_for_subs_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:text="One Month"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_30" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_30" />
+
+            <LinearLayout
+                android:id="@+id/ln_per_month_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_subs_name_30">
+
+                <TextView
+                    android:id="@+id/t_price_subs_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Price:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout30"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/t_one_meal_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="1 meal/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_one_meal_price_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_one_meal_30"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_one_meal_30"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout3030"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
+
+                        <TextView
+                            android:id="@+id/t_two_meal_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="2 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_two_meal_price_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_two_meal_30"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_two_meal_30"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout303030"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        app:layout_constraintHorizontal_bias="0.5">
+
+                        <TextView
+                            android:id="@+id/t_three_meal_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="3 meals/day"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/t_three_meal_price_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/t_three_meal_30"
+                            app:layout_constraintBottom_toBottomOf="@+id/t_three_meal_30"
+
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cond_security_deposit_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_7"
+                android:visibility="gone"
+                android:background="@drawable/bg_breakfast_time"
+                android:layout_marginTop="@dimen/dp_5"
+                app:layout_constraintTop_toBottomOf="@+id/ln_per_month_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_tiffin_box_30"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_45"
+                    android:src="@drawable/tiffin_box"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_security_deposit_30" />
+
+
+                <TextView
+                    android:id="@+id/txt_security_deposit_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="Security For Tiffin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintStart_toEndOf="@+id/img_tiffin_box_30"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/t_security_price_amount_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 200"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintStart_toStartOf="@+id/txt_security_deposit_30"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_security_deposit_30" />
+
+
+
+                <TextView
+                    android:id="@+id/t_refunded_tex_30t"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="This amount will be refunded at the time of last meal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/t_security_price_amount_30"
+                    app:layout_constraintTop_toBottomOf="@+id/t_security_price_amount_30" />
+
+                <TextView
+                    android:id="@+id/t_refundable_green_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refundable"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dp_15"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_serving_meal_30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cond_security_deposit_30">
+
+                <TextView
+                    android:id="@+id/t_serving_meal_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="Serving:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_breakfast_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="1dp"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="BreakFast"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_lunch_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+
+                        android:elevation="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Lunch"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_is_serving_dinner_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dp_5"
+                        android:elevation="4dp"
+
+                        app:layout_constraintHorizontal_bias="0.5"
+                        tools:layout_editor_absoluteX="259dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Dinner"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:drawableLeftCompat="@drawable/outline_check_circle_black_24"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_subs_one_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:padding="@dimen/dp_15"
+                android:text="Subscribe"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dp_18"
+                app:cornerRadius="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ln_serving_meal_30" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

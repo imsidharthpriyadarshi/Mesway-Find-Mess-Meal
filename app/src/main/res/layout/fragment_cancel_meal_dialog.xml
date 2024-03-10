@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.meals.CancelMealDialogFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:orientation="vertical"
+        android:background="@drawable/grey_background"
+        android:elevation="@dimen/dp_10"
+
+        >
+
+        <TextView
+            android:id="@+id/plz_confirm_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Confirm, do you want to cancel this meal?"
+            android:textSize="@dimen/dp_25"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_meal_starting_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:elevation="0.5dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/t_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="@dimen/dp_20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_10"
+                />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/t_date"
+
+                />
+
+            <TextView
+                android:id="@+id/t_cancel_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="sans-serif-medium"
+                app:layout_goneMarginStart="@dimen/dp_10"
+                android:text="Cancel credit left :"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="@dimen/dp_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t_date" />
+
+            <TextView
+                android:id="@+id/t_cancel_credit_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="How many meal you can cancel\n in this subscription"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/t_cancel_credit"
+                app:layout_constraintTop_toBottomOf="@+id/t_cancel_credit" />
+
+            <TextView
+                android:id="@+id/t_cancel_credit_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_20"
+                app:layout_constraintBottom_toBottomOf="@+id/t_cancel_credit_description"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/t_cancel_credit"
+                app:layout_goneMarginStart="@dimen/dp_10" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_meal_starting_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:elevation="0.5dp"
+            android:background="@drawable/edit_text_background"
+            >
+
+            <TextView
+                android:id="@+id/t_choose_starting_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="sans-serif-medium"
+                android:padding="@dimen/dp_5"
+                android:text="Which Meal:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radio_grp_starting_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t_choose_starting_meal">
+
+                <RadioButton
+                    android:id="@+id/radio_starting_breakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BreakFast"
+                    android:enabled="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_14" />
+
+                <RadioButton
+                    android:id="@+id/radio_starting_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lunch"
+                    android:enabled="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_14" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radio_starting_dinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dinner"
+                    android:enabled="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_14" />
+
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_cancel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/red"
+    app:strokeColor="@color/red"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:text="Cancel"
+    android:textSize="@dimen/dp_15"
+    android:padding="@dimen/dp_15"
+    android:layout_margin="@dimen/dp_30"
+    />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

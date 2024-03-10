@@ -1,0 +1,15 @@
+/build
+src/main/jni
+/google-services.json
+/release
+/build.gradle
+src/main/java/in/mesway/activity/SplashActivity.java
+src/main/java/in/mesway/activity/App.java
+src/main/java/in/mesway/client/ApiInterface.java
+src/main/java/in/mesway/client/ApiClient.java
+src/main/java/in/mesway/fragments/home/HomeFragment.java
+
+
+
+
+

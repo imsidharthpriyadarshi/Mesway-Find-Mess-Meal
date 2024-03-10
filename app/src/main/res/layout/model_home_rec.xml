@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/meal_card"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_5"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:elevation="20dp"
+    app:cardCornerRadius="@dimen/dp_20"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/meal_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img_meal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thlai_sample"
+            android:transitionName="img_meal_transition"
+            app:layout_constraintBottom_toTopOf="@+id/ln_first_meal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_weight="2" />
+
+        <LinearLayout
+            android:id="@+id/ln_first_meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_meal"
+            app:layout_constraintVertical_weight="1"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/t_mess_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Maa tiffin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_20"
+                    android:transitionName="mess_name_transition"
+                    app:layout_constraintEnd_toStartOf="@+id/ln_meal_rating_price"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/t_provided_meal_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast Lunch Dinner"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_15"
+                    app:layout_constraintTop_toBottomOf="@+id/t_mess_name"
+                    android:transitionName="mess_for_transition"
+                    app:layout_constraintBottom_toTopOf="@+id/t_mess_address"
+                    app:layout_constraintEnd_toEndOf="@id/t_mess_name"
+                    app:layout_constraintStart_toStartOf="@+id/t_mess_name" />
+
+                <TextView
+                    android:id="@+id/t_mess_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gangapur near to pankaj general store katauna nalanda  bihar(805130)"
+                    android:textSize="@dimen/dp_14"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:transitionName="mess_address_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/t_provided_meal_type"
+                    app:layout_constraintStart_toStartOf="@+id/t_provided_meal_type" />
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/ln_meal_rating_price"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/t_mess_name"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:padding="@dimen/dp_5">
+
+
+                        <LinearLayout
+                            android:id="@+id/ln_meal_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/bg_rating_drawable"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_2"
+                            android:transitionName="linear_rating_transition"
+                            app:layout_constraintEnd_toStartOf="@+id/t_how_many_rated"
+                            app:layout_constraintStart_toStartOf="@+id/t_starts_from"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/t_meal_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="4.5"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_14"
+                                android:transitionName="rating_transition" />
+
+                            <ImageView
+                                android:id="@+id/img_rating_star"
+                                android:layout_width="@dimen/dp_18"
+                                android:layout_height="@dimen/dp_18"
+                                android:src="@drawable/round_star_rate_18"
+                                android:transitionName="star_transition" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/t_how_many_rated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(243)"
+                            android:textSize="@dimen/dp_14"
+                            android:transitionName="how_many_transition"
+                            app:layout_constraintBottom_toBottomOf="@+id/ln_meal_rating"
+                            app:layout_constraintEnd_toEndOf="@+id/t_starts_from"
+                            app:layout_constraintStart_toEndOf="@+id/ln_meal_rating"
+                            app:layout_constraintTop_toTopOf="@+id/ln_meal_rating" />
+
+
+                        <TextView
+                            android:id="@+id/t_starts_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Start From"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/t_starts_from_price"
+                            app:layout_constraintTop_toBottomOf="@+id/ln_meal_rating" />
+
+                        <TextView
+                            android:id="@+id/t_starts_from_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="\u20B9 90"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_16"
+                            app:layout_constraintEnd_toEndOf="@+id/t_starts_from"
+                            app:layout_constraintEnd_toStartOf="@+id/t_how_many_rated"
+                            app:layout_constraintStart_toStartOf="@id/t_starts_from"
+                            app:layout_constraintTop_toBottomOf="@id/t_starts_from" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_begin="20dp" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/t_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
+            android:background="@drawable/bg_time_draw"
+            android:padding="@dimen/dp_5"
+            android:text="1:00pm-2:00pm"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:textSize="@dimen/dp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_meal"
+            app:layout_constraintEnd_toEndOf="@+id/img_meal" />
+
+        <LinearLayout
+            android:id="@+id/ln_pure_veg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20"
+            android:orientation="horizontal"
+            android:background="#00953E"
+            app:layout_constraintTop_toTopOf="@+id/img_meal"
+            app:layout_constraintStart_toStartOf="@+id/img_meal"
+            app:layout_constraintEnd_toEndOf="@+id/img_meal"
+           >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pure veg"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:textAlignment="center"
+                android:textSize="@dimen/dp_12"/>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/img_meal"
+            app:layout_constraintTop_toTopOf="@+id/img_meal"
+            >
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                app:srcCompat="@drawable/ic_twotone_location"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/txt_distance_km"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2 km"
+                android:gravity="center"
+                android:textSize="@dimen/dp_12"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+              />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

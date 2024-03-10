@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mesway</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="settings">Settings</string>
+    <string-array name="choose_meal">
+        <item>BreakFast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+
+    <string name="term_and_condition"><![CDATA[<u>term &amp; conditions</u>.]]></string>
+
+</resources>

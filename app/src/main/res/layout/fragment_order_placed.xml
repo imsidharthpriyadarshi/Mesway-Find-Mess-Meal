@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="0.5dp"
+    android:padding="@dimen/dp_10"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.details.OrderPlacedFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <TextView
+        android:id="@+id/txt_order_placed_successfully"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Order has been placed"
+        android:textColor="@color/green"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/dp_28"
+        android:textAlignment="center"
+
+        android:layout_margin="@dimen/dp_10"
+        android:padding="@dimen/dp_5"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_order_placed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_order_placed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        app:lottie_autoPlay="true"
+        android:layout_margin="10dp"
+        app:lottie_rawRes="@raw/order_success"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_order_placed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:background="@drawable/edit_text_background"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            app:cardCornerRadius="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_order_placed_successfully">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_payment_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Not Paid"
+
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dp_20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+               />
+
+                <TextView
+                    android:id="@+id/subscription_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:text="Pending"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/dp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/img_subscription_status"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_subscription_status"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/baseline_check_box_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorPrimary" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_mess_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/dp_5">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/img_meal"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_mess"
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="@dimen/dp_70"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/thlai_sample" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/t_mess_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Mess name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_18"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_meal"
+                    app:layout_constraintTop_toTopOf="@+id/img_meal" />
+
+
+                <TextView
+                    android:id="@+id/t_mess_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="near to ganganagar chamaparan"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/t_mess_name"
+                    app:layout_constraintTop_toBottomOf="@+id/t_mess_name" />
+
+
+                <TextView
+                    android:id="@+id/txt_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Reason :- "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_14"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/t_mess_address"
+                    app:layout_constraintTop_toBottomOf="@+id/t_mess_address" />
+
+                <TextView
+                    android:id="@+id/txt_rejected_reason_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:fontFamily="sans-serif"
+                    android:text="BreakFast, Lunch, Dinner"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dp_14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_reason"
+                    app:layout_constraintStart_toEndOf="@+id/txt_reason"
+                    app:layout_constraintTop_toTopOf="@+id/txt_reason" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_plan_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dp_5"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/t_plan_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Plan type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_plan_type_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:fontFamily="sans-serif"
+                    android:text="3 meals/day"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/t_starting_meal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Starting meal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_plan_type"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_starting_meal_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:fontFamily="sans-serif"
+                    android:text="BreakFast"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_plan_type_value"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/t_plan_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Plan price"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_starting_meal"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_plan_price_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:fontFamily="sans-serif"
+                    android:text="\u20B9 2,299"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_plan_price"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/t_plan_price" />
+
+
+                <TextView
+                    android:id="@+id/t_payment_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Payment Mode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_plan_price"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payment_mode_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:fontFamily="sans-serif"
+                    android:text="cod"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_payment_mode"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/t_payment_mode" />
+
+                <TextView
+                    android:id="@+id/t_payable_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Payable amount"
+                    android:textSize="@dimen/dp_16"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_payment_mode"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_payable_amount_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:fontFamily="sans-serif"
+                    android:text="\u20B9 00"
+                    app:layout_constraintTop_toTopOf="@+id/t_payable_amount"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_payable_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/t_refundable_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refundable amount"
+                    android:textSize="@dimen/dp_16"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t_payable_amount"
+
+                    />
+
+                <TextView
+                    android:id="@+id/t_refundable_amount_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:fontFamily="sans-serif"
+                    android:text="\u20B9 0"
+                    app:layout_constraintTop_toTopOf="@+id/t_refundable_amount"
+                    app:layout_constraintBottom_toBottomOf="@+id/t_refundable_amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txt_order_placed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:padding="@dimen/dp_10"
+                android:text="Once Seller activate your order, your plan will start (Generally this process will take 1-2 hours), To check status of your order go to your subscription section"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/dp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons_plan_type" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="Track Order"
+                android:textSize="@dimen/dp_18"
+                android:id="@+id/btn_track_order"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:padding="@dimen/dp_10"
+                android:textAllCaps="false"
+
+                />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Start from:-"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintBottom_toBottomOf="@id/t_start_from"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/t_start_from" />
+
+                <TextView
+                    android:id="@+id/t_start_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 22 Feb 2023"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/dp_14"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Valid upto:-"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp_14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/t_start_from"
+                    app:layout_constraintEnd_toStartOf="@+id/t_expired"
+                    app:layout_constraintTop_toTopOf="@id/t_start_from" />
+
+                <TextView
+                    android:id="@+id/t_expired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 24 March 2023"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dp_14"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        android:text="Done"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:textSize="@dimen/dp_18"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout_order_placed"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+ />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

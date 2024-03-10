@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/login"
+        android:name="in.mesway.fragments.signup.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_receiveOtp"
+            app:destination="@id/receiveOtp"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"
+          />
+        <action
+            android:id="@+id/action_login_to_mainActivity"
+            app:destination="@id/mainActivity"
+
+
+            app:popUpTo="@id/mainActivity"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_firstSignup"
+            app:destination="@id/firstSignup" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveOtp"
+        android:name="in.mesway.fragments.signup.ReceiveOtpFragment"
+        android:label="fragment_receive_otp"
+        tools:layout="@layout/fragment_receive_otp" >
+        <action
+            android:id="@+id/action_receiveOtp_to_firstSignup"
+            app:destination="@id/firstSignup"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_receiveOtp_to_mainActivity"
+            app:destination="@id/mainActivity"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/zoom_out"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/mainActivity"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="number"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstSignup"
+        android:name="in.mesway.fragments.signup.FirstSignupFragment"
+        android:label="fragment_first_signup"
+        tools:layout="@layout/fragment_first_signup" >
+        <action
+            android:id="@+id/action_firstSignup_to_mainActivity"
+            app:destination="@id/mainActivity"
+            app:popUpTo="@id/mainActivity"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="in.mesway.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>
